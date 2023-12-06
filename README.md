@@ -16,7 +16,7 @@ This is when readers turn to their **TBR (to-be-read) list.** A TBR list is a co
 
 Determining the book that will aid a reader in recovering from a book hangover is the primary objective of this project. The goals of this endeavor encompass two key aspects:
 
-1. Creation of a classification model to forecast, with at least 51% accuracy, what books from a reader's TBR list should be read next 
+1. Creation of a predictive model to forecast what books from a reader's TBR list should be read next, with at least 51% accuracy 
 2. Creation of a recommendation system, based off of nearly 6 million book ratings, to help readers continue to add to their TBR list
 
 _This capstone is a passion project of mine, thank you for following along!_
@@ -247,7 +247,7 @@ Below is a description of the multiple NLP models that were created:
 |TF-IDF|Ada Boost| 0.575
 
 
-The combination of TF-IDF text extracter and a Logistic Regression model had the best accuracy rate: 68.0%. After grid searching over multiple parameters, this model was improved by almost a full percent. 
+The combination of TF-IDF text extractor and a Logistic Regression model had the best accuracy rate: 68.0%. After grid searching over multiple parameters, this model was improved by almost a full percent. 
 
 |Text Extracter|Model Type|Best Parameters|Accuracy|
 |---|---|---|---|
@@ -271,7 +271,7 @@ Again, the Logistic Regression model was the best and had an accuracy of 97.4%, 
 
 ### Predictions
 
-The fundamental purpose of a machine learning models are to learn patterns, relationships, or trends within a dataset during the training phase. Now that these models are trained, they can then make predictions on the testing and/or new, unseen data based on what it has learned. Here are the findings of the wrong predictions made on the testing data:
+The fundamental purpose of a machine learning models are to learn patterns, relationships, or trends within a dataset during the training phase. Now that these models are trained, they can then make predictions on the testing and/or new, unseen data based on what it has learned. Here are the findings of the incorrect predictions made on the testing data:
 
 #### NLP Model:
 |Actually|Predicted|Total| 
@@ -299,7 +299,7 @@ What these incorrect predictions mean:
 - 22 books were predicted as "should not read" books, when they are "should read" books
 
 
-I have created a dataframe of 28 unseen data ponts that are based off of my personal "To Be Read" list. Let's see how these models predict this list:
+I have created a dataframe of 28 unseen data points that are based off of my personal "To Be Read" list. Let's see how these models predict this list:
 
 #### NLP Model:
 |Actually|Predicted|Total| 
@@ -328,18 +328,18 @@ What these incorrect predictions mean:
 
 
 **What do incorrect predictions mean in this context?**
-- Scenerio 1: A book is predicted that I should not read it immediately (an average rating of less than 4 stars)
-    - In this scenerio, I could potentially opt not to read it and miss out on a great book
-- Scenerio 2: A book is predicted that I should read it immediately (an average rating of higher than 4 stars)
-    - In this scenerio, I could potentially read a book that I dislike
-    
+- Scenario 1: A book is predicted that I should not read it immediately (an average rating of less than 4 stars)
+    - In this scenario, I could potentially opt not to read a book that could end my book hangover
+- Scenario 2: A book is predicted that I should read it immediately (an average rating of higher than 4 stars)
+    - In this scenario, I could potentially read a book that I dislike and it could end up not helping my book hangover
 
-Personally, scenerio 2 is not an issue in my eyes. I will never regret reading a book, regardless if I like it or not. Time spent exploring other worlds via books is time well spent. Scenerio 1 is what is bothersome to me. I would be upset to learn that I opted out of reading a book based on a incorrect rating. 
+
+Truthfully, neither scenario is life or death. All books will get read eventually, this just determines the timeline of that. Scenario 2 is especially not an issue in my eyes. I will never regret reading a book, regardless if I like it or not. Time spent exploring other worlds via books is time well spent. If anything, Scenario 1 is what is bothersome to me. I would be upset to learn that I opted out of reading a book that could end my sorrows, based on a incorrect rating. 
 
 
 ### Final Thoughts:
 
-Despite achieving only a 68.9% accuracy rate, I consider the NLP model the most practical due to its reliance on readily available information. To improve this model, it would be ideal to incorporate additional features that could enhance its effectiveness, including genre, book length, price, format (hardback, paperback, e-book), and written reviews. Additionally, introducing metadata about a book's cover could add an intriguing dimension. While it's commonly said not to judge a book by its cover, the visual aspect can sometimes influence the decision to read or skip a particular book.
+Despite achieving only a 68.9% accuracy rate, I consider the NLP model the most practical due to its reliance on readily available information. To improve this model, it would be ideal to incorporate additional features that could enhance its effectiveness, including genre, book length, price, and format (hardback, paperback, e-book), which is all information that a reader would have available by simply having the book. With the help of GoodReads pages, written reviews could also be added to help improve the model. Additionally, introducing metadata about a book's cover could add an intriguing dimension. While it's commonly said not to judge a book by its cover, the visual aspect can sometimes influence the decision to read or skip a particular book.
 
 # Sources: 
 
