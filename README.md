@@ -131,7 +131,7 @@ After exploring all separate datasets, here are the key findings:
 
 - Let's take a look at this same distribution, but instead of character count, lets take a look at the word count.
     - Again, this data is skewed right, with the majority of book titles being under 10 words long
-    - The longest title was 33 words longs!
+    - The longest title was 33 words long!
 <p align="center">
   <img src="images/book_title_word_count.png" />
 </p>
@@ -223,7 +223,7 @@ _Before we get to modeling, here is the process that got me to this point..._
 
 > From this point forward, a pivot towards binary classification models was implemented, as noted in the **Cleaning** section above. 
 
-If you wish to follow this process for yourself, all previous work can be found in the scatch folder under 04-Modeling.ipbynb
+If you wish to follow this process for yourself, all previous work can be found in the scratch folder under 04-Modeling.ipbynb
 
 With the binary classification outlined in the **Cleaning** section, the class weights were better distributed with 52.58% of the data being labeled as a book that a reader should read next and 47.42% of the data being labeled as a book to read later on. This is almost a 50-50 split! With this distribution, our baseline accuracy that these models need to beat is 52.58%. 
 
